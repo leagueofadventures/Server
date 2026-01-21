@@ -1116,7 +1116,7 @@ func main() {
 	}
 
 	// Подключение к PostgreSQL
-	databaseURL := os.Getenv("postgresql://leagueofadventures_user:mMYxfSXinry6yJZtJZ813JcLC1fJEiXg@dpg-d5nk38ggjchc739de5k0-a/leagueofadventures")
+	databaseURL := os.Getenv("DATABASE_URL")
 	if databaseURL == "" {
 		log.Fatal("DATABASE_URL не установлена")
 	}
