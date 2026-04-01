@@ -636,7 +636,7 @@ func gameLoop() {
 			if proj.OwnerType == "player" {
 				for mobID, mob := range mobs {
 					if math.Abs(proj.X-mob.X) < 32 && math.Abs(proj.Y-mob.Y) < 32 {
-						mob.Health -= 100
+						mob.Health -= 34
 						delete(projectiles, projID)
 						if mob.Health <= 0 {
 							delete(mobs, mobID)
@@ -650,7 +650,7 @@ func gameLoop() {
 			if proj.OwnerType == "mob" {
 				for _, player := range players {
 					if math.Abs(proj.X-player.X) < 32 && math.Abs(proj.Y-player.Y) < 32 {
-						player.Health -= 20
+						player.Health -= 34
 						player.Hurt = true
 						player.LastHurt = currentTime
 						delete(projectiles, projID)
