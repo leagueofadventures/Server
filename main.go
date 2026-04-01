@@ -648,7 +648,7 @@ func gameLoop() {
 			}
 			// Снаряды мобов -> игроки
 			if proj.OwnerType == "mob" {
-				for playerID, player := range players {
+				for _, player := range players {
 					if math.Abs(proj.X-player.X) < 32 && math.Abs(proj.Y-player.Y) < 32 {
 						player.Health -= 20
 						player.Hurt = true
