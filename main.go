@@ -554,7 +554,7 @@ func wsHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func respawnPlayer(player *Player) {
-	time.Sleep(3 * time.Second)
+	
 	player.X = WIDTH / 2
 	player.Y = HEIGHT - 100
 	player.Health = 100
